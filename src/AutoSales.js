@@ -158,7 +158,7 @@ setImageText(id, msg) {
     return (
       <div className='grid'>
         <div className='top-bottom header'>
-          <img className='autosales-logo' src='../images/autosales-logo.svg' alt='Header Autosales Logo'/>
+          <img className='autosales-logo' src='./autosales-logo.svg' alt='Header Autosales Logo'/>
           AutoSales.com
         </div>
         <div className='top-bottom nav'>
@@ -167,12 +167,12 @@ setImageText(id, msg) {
             <li>Sell My Car</li>
             <li>Find a Dealer</li>
             <li>Contact Us</li>
-              <img className='search-icon' src='../images/search-icon.svg' alt='Search Icon'/>
+              <img className='search-icon' src='./search-icon.svg' alt='Search Icon'/>
             <li></li>
           </ul>
         </div>
         <div className='getting-started'>
-          <img className='getting-started-img' src='../images/getting-started.png' alt='Getting Started'/>
+          <img className='getting-started-img' src='./getting-started.png' alt='Getting Started'/>
           <button className='button get-started-button'>Get Started Now</button>
         </div>
         <div className='car-selection'>
@@ -204,13 +204,13 @@ setImageText(id, msg) {
         </div>
         <div className='image honda-images'>
           <div id='0' className='car-image-wrapper' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
-            <img className='car-image' src='../images/honda-left.png' alt='Honda left'/>
+            <img className='car-image' src='./honda-left.png' alt='Honda left'/>
             <div className='caption'>
               <p>{this.state.hondaLeftTextMessage}</p>
             </div>
           </div>
           <div id='1' className='car-image-wrapper' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
-            <img className='car-image' src='../images/honda-right.png' alt='Honda Right'/>
+            <img className='car-image' src='./honda-right.png' alt='Honda Right'/>
             <div className='caption'>
               <p>{this.state.hondaRightTextMessage}</p>
             </div>
@@ -218,13 +218,13 @@ setImageText(id, msg) {
         </div>
         <div className='image audi-images'>
           <div id='2' className='car-image-wrapper audi-left' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
-            <img className='car-image' src='../images/audi-left.png' alt='Audi left'/>
+            <img className='car-image' src='./audi-left.png' alt='Audi left'/>
             <div className='caption'>
               <p>{this.state.audiLeftTextMessage}</p>
             </div>
           </div>
           <div id='3' className='car-image-wrapper audi-right' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
-            <img className='car-image' src='../images/audi-right.png' alt='Audi Right'/>
+            <img className='car-image' src='./audi-right.png' alt='Audi Right'/>
             <div className='caption'>
               <p>{this.state.audiRightTextMessage}</p>
             </div>
@@ -242,13 +242,13 @@ setImageText(id, msg) {
         </div>
         <div className='image chevy-images'>
           <div id='4' className='car-image-wrapper chevy-left' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
-            <img className='car-image' src='../images/chevy-left.png' alt='Chevy left'/>
+            <img className='car-image' src='./chevy-left.png' alt='Chevy left'/>
             <div className='caption'>
               <p>{this.state.chevyLeftTextMessage}</p>
             </div>
           </div>
           <div id='5' className='car-image-wrapper chevy-right' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
-            <img className='car-image' src='../images/chevy-right.png' alt='Chevy Right'/>
+            <img className='car-image' src='./chevy-right.png' alt='Chevy Right'/>
             <div className='caption'>
               <p>{this.state.chevyRightTextMessage}</p>
             </div>
@@ -256,13 +256,13 @@ setImageText(id, msg) {
         </div>
         <div className='image ford-images'>
           <div id='6' className='car-image-wrapper ford-left' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
-            <img className='car-image' src='../images/ford-left.png' alt='Ford left'/>
+            <img className='car-image' src='./ford-left.png' alt='Ford left'/>
             <div className='caption'>
               <p>{this.state.fordLeftTextMessage}</p>
             </div>
           </div>
           <div id='7' className='car-image-wrapper ford-right' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
-            <img className='car-image' src='../images/ford-right.png' alt='Ford Right'/>
+            <img className='car-image' src='./ford-right.png' alt='Ford Right'/>
             <div className='caption'>
               <p>{this.state.fordRightTextMessage}</p>
             </div>
@@ -274,7 +274,7 @@ setImageText(id, msg) {
           <button className='button view-all-button'>View All</button>
         </div>
         <div className='top-bottom footer-logo'>
-          <img className='autosales-logo' src='../images/autosales-logo.svg' alt='Footer Autosales Logo'/>
+          <img className='autosales-logo' src='./autosales-logo.svg' alt='Footer Autosales Logo'/>
           AutoSales.com
         </div>
         <div className='top-bottom footer-text'>

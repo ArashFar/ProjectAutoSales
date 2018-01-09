@@ -66,7 +66,7 @@ componentDidMount() {
 
   this.hoverTextMessages = [
     <div className='image-hover-text'>
-      <p>Honda civic<hr className='horizontal-rule'/></p><p className='learn-more'>Learn More</p>
+      <p>Honda Civic<hr className='horizontal-rule'/></p><p className='learn-more'>Learn More</p>
     </div>,
     <div className='image-hover-text'>
       <p>Honda CRV<hr className='horizontal-rule'/></p><p className='learn-more'>Learn More</p>
@@ -203,23 +203,31 @@ setImageText(id, msg) {
           <button className='button view-all-button'>View All</button>
         </div>
         <div className='image honda-images'>
-          <div id='0' className='car-image-wrapper honda-left' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
+          <div id='0' className='car-image-wrapper' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
             <img className='car-image' src='../images/honda-left.png' alt='Honda left'/>
-            <p className='left-text'>{this.state.hondaLeftTextMessage}</p>
+            <div className='caption'>
+              <p>{this.state.hondaLeftTextMessage}</p>
+            </div>
           </div>
-          <div id='1' className='car-image-wrapper honda-right' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
+          <div id='1' className='car-image-wrapper' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
             <img className='car-image' src='../images/honda-right.png' alt='Honda Right'/>
-            <p className='right-text'>{this.state.hondaRightTextMessage}</p>
+            <div className='caption'>
+              <p>{this.state.hondaRightTextMessage}</p>
+            </div>
           </div>
         </div>
         <div className='image audi-images'>
           <div id='2' className='car-image-wrapper audi-left' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
             <img className='car-image' src='../images/audi-left.png' alt='Audi left'/>
-            <p className='left-text'>{this.state.audiLeftTextMessage}</p>
+            <div className='caption'>
+              <p>{this.state.audiLeftTextMessage}</p>
+            </div>
           </div>
           <div id='3' className='car-image-wrapper audi-right' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
             <img className='car-image' src='../images/audi-right.png' alt='Audi Right'/>
-            <p className='right-text'>{this.state.audiRightTextMessage}</p>
+            <div className='caption'>
+              <p>{this.state.audiRightTextMessage}</p>
+            </div>
           </div>
         </div>
         <div className='content audi-content'>
@@ -235,21 +243,29 @@ setImageText(id, msg) {
         <div className='image chevy-images'>
           <div id='4' className='car-image-wrapper chevy-left' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
             <img className='car-image' src='../images/chevy-left.png' alt='Chevy left'/>
-            <p className='left-text'>{this.state.chevyLeftTextMessage}</p>
+            <div className='caption'>
+              <p>{this.state.chevyLeftTextMessage}</p>
+            </div>
           </div>
           <div id='5' className='car-image-wrapper chevy-right' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
             <img className='car-image' src='../images/chevy-right.png' alt='Chevy Right'/>
-            <p className='right-text'>{this.state.chevyRightTextMessage}</p>
+            <div className='caption'>
+              <p>{this.state.chevyRightTextMessage}</p>
+            </div>
           </div>
         </div>
         <div className='image ford-images'>
           <div id='6' className='car-image-wrapper ford-left' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
             <img className='car-image' src='../images/ford-left.png' alt='Ford left'/>
-            <p className='left-text'>{this.state.fordLeftTextMessage}</p>
+            <div className='caption'>
+              <p>{this.state.fordLeftTextMessage}</p>
+            </div>
           </div>
           <div id='7' className='car-image-wrapper ford-right' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
             <img className='car-image' src='../images/ford-right.png' alt='Ford Right'/>
-            <p className='right-text'>{this.state.fordRightTextMessage}</p>
+            <div className='caption'>
+              <p>{this.state.fordRightTextMessage}</p>
+            </div>
           </div>
         </div>
         <div className='content ford-content'>

@@ -239,18 +239,6 @@ select:hover {
   float: left;
 }
 
-.left-text {
-  position: absolute;
-  bottom: 35%;
-  left: 26%;
-}
-
-.right-text {
-  position: absolute;
-  bottom: 35%;
-  left: 51%;
-}
-
 .image-hover-text {
   color: white;
   line-height: 1.5;
@@ -306,11 +294,24 @@ select:hover {
   width: 150px;
   height: 150px;
   float: left;
+  position: relative;
+  display: inline-block;
+}
+
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+  text-align: center;
+  color: white;
+  font-weight: bold;
 }
 
 .car-image {
   width: 150px;
   height: 150px;
+  display: block;
 }
 
 .car-image-wrapper:hover {

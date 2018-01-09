@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  'header nav'
+  'getting-started getting-started'
+  'car-selection car-selection'
+  'honda-content honda-images'
+  'audi-images audi-content'
+  'chevy-content chevy-images'
+  'ford-images ford-content'
+  'footer-logo footer-text';
+}
+
+.grid div[class*='-content']:nth-child(odd),
+.grid div[class*='-images']:nth-child(even) {
+  background-color:#EFF3F4;
+}
+
+.grid div[class*='-content']:nth-child(even),
+.grid div[class*='-images']:nth-child(odd) {
+  background-color:#FEFFFF;
+}
+
+.header {
+  grid-area: header;
+  height: 25px;
+  line-height: 25px;
+  font-size: 11px;
+}
+
+.top-bottom {
+  background-color: #3C4853;
+  color: #FFFFFF;
+  vertical-align: middle;
+}
+
+.nav {
+  grid-area: nav;
+  height: 25px;
+  line-height: 25px;
+  font-size: 8px;
+  padding-left: 200px;
+}
+
+.ul-nav > li {
+  list-style-type: none;
+  display: inline;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.search-icon {
+  width: 12px;
+  height: 12px;
+  margin: 1px 3px 3px 20px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.getting-started {
+  grid-area: getting-started;
+  position: relative;
+}
+
+.getting-started-img {
+  width: 100%;
+}
+
+.get-started-button {
+  position: absolute;
+  bottom: 33%;
+  left: 13%;
+  height: 30px;
+  width: 130px;
+  background-color: #34C07B;
+}
+
+.get-started-button:hover {
+  background-color: #38D286;
+  cursor: pointer;
+}
+
+.car-selection {
+  grid-area: car-selection;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.honda-content {
+  grid-area: honda-content;
+}
+
+.audi-content {
+  grid-area: audi-content;
+}
+
+.chevy-content {
+  grid-area: chevy-content;
+}
+
+.ford-content {
+  grid-area: ford-content;
+}
+
+.honda-images {
+  grid-area: honda-images;
+}
+
+.audi-images {
+  grid-area: audi-images;
+}
+
+.chevy-images {
+  grid-area: chevy-images;
+}
+
+.ford-images {
+  grid-area: ford-images;
+}
+
+.footer-logo {
+  grid-area: footer-logo;
+  height: 55px;
+  line-height: 50px;
+  font-size: 11px;
+}
+
+.footer-text {
+  height: 55px;
+  line-height: 55px;
+  font-size: 7px;
+  color: #6B787E;
+  padding-left: 280px;
+  white-space: nowrap;
+}
+
+.autosales-logo {
+  width: 22px;
+  height: 22px;
+  margin: 0 3px 4px 20px;
+  vertical-align: middle;
+}
+
+select {
+    padding-right: 10px!important;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    height: 22px;
+    width: 150px;
+    font-size: 10px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: 1px 1px 1px #ccc, 0 -1px #fff inset;
+    -moz-box-shadow: 1px 1px 1px #ccc, 0 -1px #fff inset;
+    box-shadow: 1px 1px 1px #ccc, 0 -1px #fff inset;
+    color: #888;
+    border: 1px solid #CCCCCC;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {padding-right:18px}
+}
+
+label {
+  position: relative
+}
+
+label:after {
+  content: '>';
+  font: 11px "Consolas", monospace;
+  color: #aaa;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 10px;
+  top: 5px;
+  padding: 0 0 2px;
+  position: absolute;
+  pointer-events: none;
+}
+
+label:before {
+  content: '';
+  right: 1px;
+  top: 0;
+  width: 20px;
+  background: #f8f8f8;
+  position: absolute;
+  pointer-events: none;
+  display: block;
+}
+
+select:hover {
+  border: 1px solid #3B4953;
+}
+
+.button {
+  border-radius: 0;
+  border-style: none;
+  color: white;
+  font-size: 10px;
+}
+
+.find-dream-car-button {
+  height: 22px;
+  width: 150px;
+  background-color: #ED7F63;
+  margin-left: 10px;
+}
+
+.find-dream-car-button:hover {
+  background-color: #F9957A;
+  cursor: pointer;
+}
+
+.content,
+.image {
+  padding-left: 25%;
+}
+
+.image {
+  position: relative;
+  float: left;
+}
+
+.left-text {
+  position: absolute;
+  bottom: 35%;
+  left: 26%;
+}
+
+.right-text {
+  position: absolute;
+  bottom: 35%;
+  left: 51%;
+}
+
+.image-hover-text {
+  color: white;
+  line-height: 1.5;
+  text-align: center;
+  width: 150px;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.learn-more {
+  font-size: 13px;
+}
+
+.horizontal-rule {
+  border-top: 1px solid white!important;
+  border-width: 1.5px;
+  width: 80%;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.car-title {
+  color: #3C4853;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.car-description {
+  color: #3C4853;
+  font-size: 11px;
+  width: 50%;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.view-all-button {
+  height: 20px;
+  width: 70px;
+  background-color: #54C4E5;
+}
+
+.view-all-button:hover {
+  background-color: #62D3F3;
+  cursor: pointer;
+}
+
+.car-image-wrapper {
+  margin: 20px 0 20px 10px;
+  width: 150px;
+  height: 150px;
+  float: left;
+}
+
+.car-image {
+  width: 150px;
+  height: 150px;
+}
+
+.car-image-wrapper:hover {
+  -webkit-filter: brightness(0.7);
+  filter: brightness(0.7);
+  cursor: pointer;
+}

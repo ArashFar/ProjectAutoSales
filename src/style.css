@@ -1,52 +1,138 @@
-* {
+body {
+  font-family: Verdana;
   margin: 0;
   padding: 0;
-  font-family: Verdana;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-  'header nav'
-  'getting-started getting-started'
-  'car-selection car-selection'
-  'honda-content honda-images'
-  'audi-images audi-content'
-  'chevy-content chevy-images'
-  'ford-images ford-content'
-  'footer-logo footer-text';
-}
+  #main-container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(30px, auto);
+    grid-template-areas:
+    'header header nav nav nav nav'
+    'get-started get-started get-started get-started get-started get-started'
+    '.car-selection car-selection car-selection car-selection.'
+    '. left-honda-content left-honda-content right-honda-car right-honda-car .'
+    '. left-audi-car left-audi-car right-audi-content right-audi-content .'
+    '. left-chevy-content left-chevy-content right-chevy-car right-chevy-car .'
+    '. left-ford-car left-ford-car right-ford-content right-ford-content .'
+    'footer footer privacy privacy privacy privacy'
+    'footer footer privacy privacy privacy privacy'
+    'footer footer privacy privacy privacy privacy';
+   }
 
-.grid div[class*='-content']:nth-child(odd),
-.grid div[class*='-images']:nth-child(even) {
-  background-color:#EFF3F4;
-}
-
-.grid div[class*='-content']:nth-child(even),
-.grid div[class*='-images']:nth-child(odd) {
-  background-color:#FEFFFF;
-}
+/*
+grid-area: start
+*/
 
 .header {
   grid-area: header;
-  height: 25px;
-  line-height: 25px;
-  font-size: 11px;
-}
-
-.top-bottom {
-  background-color: #3C4853;
-  color: #FFFFFF;
-  vertical-align: middle;
 }
 
 .nav {
   grid-area: nav;
-  height: 25px;
-  line-height: 25px;
+}
+
+.get-started {
+  grid-area: get-started;
+  position: relative;
+}
+
+.car-selection {
+  grid-area: car-selection;
+  padding: 5px;
+  text-align: center;
+}
+
+.left-honda-content {
+  grid-area: left-honda-content;
+}
+
+.right-honda-car {
+  grid-area: right-honda-car;
+}
+
+.right-audi-content {
+  grid-area: right-audi-content ;
+}
+
+.left-audi-car {
+  grid-area: left-audi-car;
+}
+
+.left-chevy-content {
+  grid-area: left-chevy-content;
+}
+
+.right-chevy-car {
+  grid-area: right-chevy-car;
+}
+
+.left-ford-car {
+  grid-area: left-ford-car;
+}
+
+.right-ford-content {
+  grid-area: right-ford-content;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.privacy {
+  grid-area: privacy;
+}
+/*
+grid-area: end
+*/
+
+/*
+header and footer: start
+*/
+.header, .footer {
+  font-size: 11px;
+  color: #FEFFFF;
+}
+
+.header, .footer, .privacy, .nav {
+  background-color: #3C4853;
+}
+
+.logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  margin-top: -2px;
+  vertical-align: middle;
+}
+
+.privacy {
+  color: #85a4b4;
   font-size: 8px;
-  padding-left: 200px;
+  padding-top: 35px;
+  padding-right: 20px;
+}
+
+.header-content {
+  padding-top: 10px;
+}
+
+.footer-content {
+  padding-top: 35px;
+}
+
+.header-content, .footer-content {
+  padding-left: 20px;
+}
+
+.nav {
+  color: #FDFCFF;
+  font-size: 10px;
+}
+
+.nav ul, .privacy {
+  text-align: right;
 }
 
 .ul-nav > li {
@@ -59,24 +145,33 @@
 .search-icon {
   width: 12px;
   height: 12px;
-  margin: 1px 3px 3px 20px;
+  margin-bottom: 2px;
   vertical-align: middle;
   cursor: pointer;
 }
+/*
+header and footer: end
+*/
 
-.getting-started {
-  grid-area: getting-started;
-  position: relative;
+/*get-started: start */
+.get-started-img {
+  width: 100%;
+  background-size: cover;
 }
 
-.getting-started-img {
-  width: 100%;
+.button {
+  border-radius: 0;
+  border-style: none;
+  color: white;
+  font-size: 10px;
+  height: 22px;
+  cursor: pointer;
 }
 
 .get-started-button {
   position: absolute;
-  bottom: 33%;
-  left: 13%;
+  bottom: 23%;
+  left: 13.5%;
   height: 30px;
   width: 130px;
   background-color: #34C07B;
@@ -84,78 +179,27 @@
 
 .get-started-button:hover {
   background-color: #38D286;
-  cursor: pointer;
+}
+/*get-started: end */
+
+/*car-selection: start */
+.find-dream-car-button {
+  width: 155px;
+  margin-right: 10px;
+  background-color: #ED7F63;
 }
 
-.car-selection {
-  grid-area: car-selection;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: center;
-}
-
-.honda-content {
-  grid-area: honda-content;
-}
-
-.audi-content {
-  grid-area: audi-content;
-}
-
-.chevy-content {
-  grid-area: chevy-content;
-}
-
-.ford-content {
-  grid-area: ford-content;
-}
-
-.honda-images {
-  grid-area: honda-images;
-}
-
-.audi-images {
-  grid-area: audi-images;
-}
-
-.chevy-images {
-  grid-area: chevy-images;
-}
-
-.ford-images {
-  grid-area: ford-images;
-}
-
-.footer-logo {
-  grid-area: footer-logo;
-  height: 55px;
-  line-height: 50px;
-  font-size: 11px;
-}
-
-.footer-text {
-  height: 55px;
-  line-height: 55px;
-  font-size: 7px;
-  color: #6B787E;
-  padding-left: 280px;
-  white-space: nowrap;
-}
-
-.autosales-logo {
-  width: 22px;
-  height: 22px;
-  margin: 0 3px 4px 20px;
-  vertical-align: middle;
+.find-dream-car-button:hover {
+  background-color: #F9957A;
 }
 
 select {
     padding-right: 10px!important;
     padding-left: 10px;
-    margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 5px;
     height: 22px;
-    width: 150px;
+    width: 155px;
     font-size: 10px;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -172,10 +216,6 @@ select {
     cursor: pointer;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    select {padding-right:18px}
-}
-
 label {
   position: relative
 }
@@ -189,18 +229,14 @@ label:after {
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   right: 10px;
-  top: 5px;
-  padding: 0 0 2px;
+  top: 4px;
+  padding: 0 10px 2px;
   position: absolute;
   pointer-events: none;
 }
 
 label:before {
   content: '';
-  right: 1px;
-  top: 0;
-  width: 20px;
-  background: #f8f8f8;
   position: absolute;
   pointer-events: none;
   display: block;
@@ -209,32 +245,31 @@ label:before {
 select:hover {
   border: 1px solid #3B4953;
 }
+/*car-selection: end */
 
-.button {
-  border-radius: 0;
-  border-style: none;
-  color: white;
-  font-size: 10px;
+/*car description and images: start */
+.left-content {
+  padding-top: 10px;
+  padding-left: 95px;
+  background-color: #EFF3F4;
 }
 
-.find-dream-car-button {
-  height: 22px;
-  width: 150px;
-  background-color: #ED7F63;
-  margin-left: 10px;
+.right-content {
+  padding-top: 10px;
+  padding-left: 45px;
+  background-color:#FEFFFF;
 }
 
-.find-dream-car-button:hover {
-  background-color: #F9957A;
-  cursor: pointer;
+.right-car {
+  background-color: #EFF3F4;
 }
 
-.content,
-.image {
-  padding-left: 25%;
+.left-car {
+  background-color: #FEFFFF;
+  padding-left: 80px;
 }
 
-.image {
+.img {
   position: relative;
   float: left;
 }
@@ -245,7 +280,7 @@ select:hover {
   text-align: center;
   width: 150px;
   margin-left: 10px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .learn-more {
@@ -271,7 +306,7 @@ select:hover {
 .car-description {
   color: #3C4853;
   font-size: 11px;
-  width: 50%;
+  width: 80%;
   text-align: justify;
   text-justify: inter-word;
   margin-bottom: 10px;
@@ -281,18 +316,18 @@ select:hover {
 .view-all-button {
   height: 20px;
   width: 70px;
+  margin-top: 10px;
   background-color: #54C4E5;
 }
 
 .view-all-button:hover {
   background-color: #62D3F3;
-  cursor: pointer;
 }
 
-.car-image-wrapper {
+.car-img-wrapper {
   margin: 20px 0 20px 10px;
-  width: 150px;
-  height: 150px;
+  width: 155px;
+  height: 155px;
   float: left;
   position: relative;
   display: inline-block;
@@ -308,14 +343,15 @@ select:hover {
   font-weight: bold;
 }
 
-.car-image {
+.car-img {
   width: 150px;
   height: 150px;
-  display: block;
+  display: inline-block;
 }
 
-.car-image-wrapper:hover {
+.car-img-wrapper:hover {
   -webkit-filter: brightness(0.7);
   filter: brightness(0.7);
   cursor: pointer;
 }
+/*car description and images: end */

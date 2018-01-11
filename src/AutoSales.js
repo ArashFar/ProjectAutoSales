@@ -66,28 +66,28 @@ componentDidMount() {
 
   this.hoverTextMessages = [
     <div className='image-hover-text'>
-      <p>Honda Civic<hr className='horizontal-rule'/></p><p className='learn-more'>Learn More</p>
+      <span>Honda Civic<hr className='horizontal-rule'/></span><span className='learn-more'>Learn More</span>
     </div>,
     <div className='image-hover-text'>
-      <p>Honda CRV<hr className='horizontal-rule'/></p><p className='learn-more'>Learn More</p>
+      <span>Honda CRV<hr className='horizontal-rule'/></span><span className='learn-more'>Learn More</span>
     </div>,
     <div className='image-hover-text'>
-      <p>Audi A3<hr className='horizontal-rule'/></p><p className='learn-more'>Learn More</p>
+      <span>Audi A3<hr className='horizontal-rule'/></span><span className='learn-more'>Learn More</span>
     </div>,
     <div className='image-hover-text'>
-      <p>Audi A7<hr className='horizontal-rule'/></p><p className='learn-more'>Learn More</p>
+      <span>Audi A7<hr className='horizontal-rule'/></span><span className='learn-more'>Learn More</span>
     </div>,
     <div className='image-hover-text'>
-      <p>Chevy Corvette<hr className='horizontal-rule'/></p><p className='learn-more'>Learn More</p>
+      <span>Chevy Corvette<hr className='horizontal-rule'/></span><span className='learn-more'>Learn More</span>
     </div>,
     <div className='image-hover-text'>
-      <p>Chevy Colorado<hr className='horizontal-rule'/></p><p className='learn-more'>Learn More</p>
+      <span>Chevy Colorado<hr className='horizontal-rule'/></span><span className='learn-more'>Learn More</span>
     </div>,
     <div className='image-hover-text'>
-      <p>Ford Fiesta<hr className='horizontal-rule'/></p><p className='learn-more'>Learn More</p>
+      <span>Ford Fiesta<hr className='horizontal-rule'/></span><span className='learn-more'>Learn More</span>
     </div>,
     <div className='image-hover-text'>
-      <p>Ford Explorer<hr className='horizontal-rule'/></p><p className='learn-more'>Learn More</p>
+      <span>Ford Explorer<hr className='horizontal-rule'/></span><span className='learn-more'>Learn More</span>
     </div>
   ]
 }
@@ -105,7 +105,7 @@ changeMake(evt) {
   let elem = document.getElementById('Model')
   elem.innerHTML = modelOptions;
   elem.value = models[0][0];
-  this._changePrice(elem.value);//on some browsers the onChange is not called automatically
+  this._changePrice(elem.value);
 }
 
 changePrice(evt) {
@@ -156,23 +156,24 @@ setImageText(id, msg) {
 
   render() {
     return (
-      <div className='grid'>
-        <div className='top-bottom header'>
-          <img className='autosales-logo' src='./autosales-logo.svg' alt='Header Autosales Logo'/>
-          AutoSales.com
+      <div id='main-container'>
+        <div className='header'>
+          <div className='header-content'>
+          <img className='logo' src='./logo.svg' alt='logo'/>AutoSales.com
+          </div>
         </div>
-        <div className='top-bottom nav'>
+        <div className='nav'>
           <ul className='ul-nav'>
             <li>Cars for Sale</li>
             <li>Sell My Car</li>
             <li>Find a Dealer</li>
             <li>Contact Us</li>
-              <img className='search-icon' src='./search-icon.svg' alt='Search Icon'/>
+              <img className='search-icon' src='./search-icon.svg' alt='Search'/>
             <li></li>
           </ul>
         </div>
-        <div className='getting-started'>
-          <img className='getting-started-img' src='./getting-started.png' alt='Getting Started'/>
+        <div className='get-started'>
+          <img className='get-started-img' src='./get-started.png' alt='Getting Started'/>
           <button className='button get-started-button'>Get Started Now</button>
         </div>
         <div className='car-selection'>
@@ -197,88 +198,89 @@ setImageText(id, msg) {
           </label>
           <button className='button find-dream-car-button'>Find My Dream Car</button>
         </div>
-        <div className='content honda-content'>
+        <div className='left-honda-content left-content'>
           <p className='car-title'>Honda Cars and SUVs</p>
           <p className='car-description'>Gumbo beet greens corn solo endive gumbo ground. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.</p>
           <button className='button view-all-button'>View All</button>
         </div>
-        <div className='image honda-images'>
-          <div id='0' className='car-image-wrapper' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
-            <img className='car-image' src='./honda-left.png' alt='Honda left'/>
+        <div className='img right-honda-car right-car'>
+          <div id='0' className='car-img-wrapper' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
+            <img className='car-img' src='./honda-left.png' alt='Honda left'/>
             <div className='caption'>
-              <p>{this.state.hondaLeftTextMessage}</p>
+              <span>{this.state.hondaLeftTextMessage}</span>
             </div>
           </div>
-          <div id='1' className='car-image-wrapper' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
-            <img className='car-image' src='./honda-right.png' alt='Honda Right'/>
+          <div id='1' className='img car-img-wrapper' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
+            <img className='car-img' src='./honda-right.png' alt='Honda Right'/>
             <div className='caption'>
-              <p>{this.state.hondaRightTextMessage}</p>
-            </div>
-          </div>
-        </div>
-        <div className='image audi-images'>
-          <div id='2' className='car-image-wrapper audi-left' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
-            <img className='car-image' src='./audi-left.png' alt='Audi left'/>
-            <div className='caption'>
-              <p>{this.state.audiLeftTextMessage}</p>
-            </div>
-          </div>
-          <div id='3' className='car-image-wrapper audi-right' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
-            <img className='car-image' src='./audi-right.png' alt='Audi Right'/>
-            <div className='caption'>
-              <p>{this.state.audiRightTextMessage}</p>
+              <span>{this.state.hondaRightTextMessage}</span>
             </div>
           </div>
         </div>
-        <div className='content audi-content'>
-        <p className='car-title'>Audi Cars and SUVs</p>
-        <p className='car-description'>Gumbo beet greens corn solo endive gumbo ground. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.</p>
-        <button className='button view-all-button'>View All</button>
+        <div className='img left-audi-car left-car'>
+          <div id='2' className='car-img-wrapper' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
+            <img className='car-img' src='./audi-left.png' alt='Audi left'/>
+            <div className='caption'>
+              <span>{this.state.audiLeftTextMessage}</span>
+            </div>
+          </div>
+          <div id='3' className='car-img-wrapper' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
+            <img className='car-img' src='./audi-right.png' alt='Audi Right'/>
+            <div className='caption'>
+              <span>{this.state.audiRightTextMessage}</span>
+            </div>
+          </div>
         </div>
-        <div className='content chevy-content'>
+        <div className='right-audi-content right-content'>
+          <p className='car-title'>Audi Cars and SUVs</p>
+          <p className='car-description'>Gumbo beet greens corn solo endive gumbo ground. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.</p>
+          <button className='button view-all-button'>View All</button>
+        </div>
+        <div className='left-chevy-content left-content'>
           <p className='car-title'>Chevy Cars, Trucks, and SUVs</p>
           <p className='car-description'>Gumbo beet greens corn solo endive gumbo ground. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.</p>
           <button className='button view-all-button'>View All</button>
         </div>
-        <div className='image chevy-images'>
-          <div id='4' className='car-image-wrapper chevy-left' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
-            <img className='car-image' src='./chevy-left.png' alt='Chevy left'/>
+        <div className='img right-chevy-car right-car'>
+          <div id='4' className='car-img-wrapper chevy-left' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
+            <img className='car-img' src='./chevy-left.png' alt='Chevy left'/>
             <div className='caption'>
-              <p>{this.state.chevyLeftTextMessage}</p>
+              <span>{this.state.chevyLeftTextMessage}</span>
             </div>
           </div>
-          <div id='5' className='car-image-wrapper chevy-right' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
-            <img className='car-image' src='./chevy-right.png' alt='Chevy Right'/>
+          <div id='5' className='car-img-wrapper chevy-right' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
+            <img className='car-img' src='./chevy-right.png' alt='Chevy Right'/>
             <div className='caption'>
-              <p>{this.state.chevyRightTextMessage}</p>
-            </div>
-          </div>
-        </div>
-        <div className='image ford-images'>
-          <div id='6' className='car-image-wrapper ford-left' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
-            <img className='car-image' src='./ford-left.png' alt='Ford left'/>
-            <div className='caption'>
-              <p>{this.state.fordLeftTextMessage}</p>
-            </div>
-          </div>
-          <div id='7' className='car-image-wrapper ford-right' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
-            <img className='car-image' src='./ford-right.png' alt='Ford Right'/>
-            <div className='caption'>
-              <p>{this.state.fordRightTextMessage}</p>
+              <span>{this.state.chevyRightTextMessage}</span>
             </div>
           </div>
         </div>
-        <div className='content ford-content'>
+        <div className='img left-ford-car left-car'>
+          <div id='6' className='car-img-wrapper ford-left' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
+            <img className='car-img' src='./ford-left.png' alt='Ford left'/>
+            <div className='caption'>
+              <span>{this.state.fordLeftTextMessage}</span>
+            </div>
+          </div>
+          <div id='7' className='car-img-wrapper ford-right' onMouseOver={this.imageMouseOver} onMouseLeave={this.imageMouseLeave}>
+            <img className='car-img' src='./ford-right.png' alt='Ford Right'/>
+            <div className='caption'>
+              <span>{this.state.fordRightTextMessage}</span>
+            </div>
+          </div>
+        </div>
+        <div className='right-ford-content right-content'>
           <p className='car-title'>Ford Cars, Trucks, and SUVs</p>
           <p className='car-description'>Gumbo beet greens corn solo endive gumbo ground. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.</p>
           <button className='button view-all-button'>View All</button>
         </div>
-        <div className='top-bottom footer-logo'>
-          <img className='autosales-logo' src='./autosales-logo.svg' alt='Footer Autosales Logo'/>
-          AutoSales.com
+        <div className='footer'>
+          <div className='footer-content'>
+            <img className='logo' src='./logo.svg' alt='logo'/>AutoSales.com
+          </div>
         </div>
-        <div className='top-bottom footer-text'>
-          <p>Copyright@2016 AutoSales.com | All rights reserved | Privacy Policy</p>
+        <div className='privacy'>
+          <span>Copyright@2016 AutoSales.com | All rights reserved | Privacy Policy</span>
         </div>
       </div>
     );
